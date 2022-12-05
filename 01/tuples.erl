@@ -22,8 +22,8 @@ access_first_element(Tuple) ->
       io:format("First is: ~p~n", [First]);
     false -> 
       io:format("give me a tuple~n")
-    end.
+    end;
 
-access_first_element() ->
+access_first_element(_) ->
   io:format("give me a tuple~n").
   
