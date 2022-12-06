@@ -2,7 +2,6 @@
 -compile(export_all).
 
 quicksort([]) -> []; 
-
 quicksort([Pivot|Rest]) -> 
   {Smaller, Larger} = partition(Pivot, Rest, [], []),
   quicksort(Smaller) ++ [Pivot] ++ quicksort(Larger).

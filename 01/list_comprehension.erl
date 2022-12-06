@@ -27,7 +27,7 @@ within_pricerange(Menu, From, To) when is_float(From), is_float(To) ->
   [{Dish, Price} || {Dish, Price, _} <- Menu, Price >= From, Price =< To].
 
 filter_by_type(Menu, T) -> 
-  [{Dish, Price, Type} || {Dish, Price, Type} <- Menu, Type =:= T].
+  [X || X = {_, _, Type} <- Menu, Type =:= T].
 
 show_meat(Menu) -> 
   [{Dish, Price} || {Dish, Price, meat} <- Menu].
