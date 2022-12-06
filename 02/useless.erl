@@ -11,7 +11,9 @@
 -define(DIVIDE(X,Y), X/Y).
 
 -ifdef(DEBUGMODE).
--define(DEBUG(S), io:format("dbg: " ++S)).
+-define(DEBUG(S), 
+  SomeVar = "heh",
+  io:format("dbg: ~nSomeVar:~p~n" ++S, [SomeVar])).
 -else.
 -define(DEBUG(S), ok).
 -endif.
