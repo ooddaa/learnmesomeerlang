@@ -21,6 +21,7 @@
 -ifdef(TESTMODE).
   test() -> test_stuff(). 
 -endif.
+-deprecated([{hello2, 0, "Use hello/0 instead"}]).
 
 add(A,B) ->
   A + B.
