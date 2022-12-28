@@ -10,6 +10,10 @@ rpn(L) ->
   [Res] = lists:foldl(fun rpn/2, [], string:tokens(L, " ")),
   Res.
 
+% if we encountered operator, 
+% replace the two last operands 
+% from the top of the stack
+% with the result of the operation
 rpn("+", [N1,N2|Tail]) -> [N2+N1|Tail];
 rpn("-", [N1,N2|Tail]) -> [N2-N1|Tail];
 rpn("*", [N1,N2|Tail]) -> [N2*N1|Tail];
