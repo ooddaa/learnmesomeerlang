@@ -1,12 +1,12 @@
 -module(shortest_path).
--compile(export_all).
+-export([main/1]).
 
 % unlike Fred I represent segments as 
-% A --1-- (A1) --3-- (A2)  ..etc..
-% |        |          |
-% 0        4          7
-% |        |          |
-% B --2-- (B1) --5-- (B2)
+% (A) --1-- (A1) --3-- (A2)  ..etc..
+%  |         |          |
+%  0         4          7
+%  |         |          |
+% (B) --2-- (B1) --5-- (B2)
 % 
 % which comes out as {A,X,B} <- top-down approach
 % [{1,0,2}, {3,4,5}] 
